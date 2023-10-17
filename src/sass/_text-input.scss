@@ -1,137 +1,116 @@
-
-
-
-$color-main : #cec0ae;
-$color-primary :  #7799c5;
+$color-main: #cec0ae;
+$color-primary: #7799c5;
 $color-secondary: #abd376;
 $color-error: #da2929;
 
+.text-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 3rem;
+  padding: 0.5rem 0;
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
 
-.text-input{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 0 3rem ;
-    padding: .5rem 0;
-    @media screen and (max-width: 1000px){
-        width: 100%;
+  &__input {
+    width: 100%;
+    font-family: inherit;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 5px rgba($color-main, 0.05);
+    transition: all 0.2s ease;
+    z-index: 2;
+    &:hover {
+      box-shadow: 0 5px 15px 4px rgba($color-main, 0.2);
+      transform: scale(1.01);
     }
-    
-    
-    &__input{
-        
-        width: 100%;
-        font-family: inherit;
-        border: none;
-        padding: 1rem ;
-        border-radius: 5px;
-        background-color: #ffffff;
-        box-shadow: 0 5px 5px  rgba($color-main, .05);
-        transition: all .2s ease;
-        z-index: 2;
-        &:hover{
-            box-shadow: 0 5px 15px 4px rgba($color-main, .2);
-            transform: scale(1.01);
 
-        }
-       
-        &--primary{
-
-            border-bottom: 2px solid $color-primary;
-            
-        }
-        &--secondary{
-            border-bottom: 2px solid  $color-secondary;
-
-        }
-        &--error{
-            border: 2px solid  $color-error;
-        }
-        &:focus{
-            outline: none;
-        }
-         &:active, &:focus {
-            transform: scale(1.01);
-            border-right-width: 2px;
-            box-shadow: 0 5px 15px 4px rgba($color-main, .2);
-        }
+    &--primary {
+      border-bottom: 2px solid $color-primary;
     }
-    &__label{
-        position: absolute;
-        overflow: hidden; 
-        left: .8rem;
-        top: 0;
-        font-size: 1.4rem;
-        transform: translateY(-100%);
-        transition: all .4s ease-out;
-        &--primary{
-            color: $color-primary;
-        }
-        &--secondary{
-            color: $color-secondary;
-        }
+    &--secondary {
+      border-bottom: 2px solid $color-secondary;
     }
-    &__err-msg{
-        position: absolute;
-        overflow: hidden; 
-       
-        bottom: 1rem;
-        right: .8rem;
-        // z-index: 20;
-        font-size: 1.4rem;
-        transform: translateY(0);
-        transition: all .4s ease-out;
-        color: $color-error;
-        &--error{
-
-            transform: translateY(100%);
-           
-
-        } 
-       
+    &--error {
+      border: 2px solid $color-error;
     }
-    &__input:placeholder-shown + &__label{
-        transform: translateY(0);
-
+    &:focus {
+      outline: none;
     }
+    &:active,
+    &:focus {
+      transform: scale(1.01);
+      border-right-width: 2px;
+      box-shadow: 0 5px 15px 4px rgba($color-main, 0.2);
+    }
+  }
+  &__label {
+    position: absolute;
+    overflow: hidden;
+    left: 0.8rem;
+    top: 0;
+    font-size: 1.4rem;
+    transform: translateY(-100%);
+    transition: all 0.4s ease-out;
+    &--primary {
+      color: $color-primary;
+    }
+    &--secondary {
+      color: $color-secondary;
+    }
+  }
+  &__err-msg {
+    position: absolute;
+    overflow: hidden;
+
+    bottom: 1rem;
+    right: 0.8rem;
+    // z-index: 20;
+    font-size: 1.4rem;
+    transform: translateY(0);
+    transition: all 0.4s ease-out;
+    color: $color-error;
+    &--error {
+      transform: translateY(100%);
+    }
+  }
+  &__input:placeholder-shown + &__label {
+    transform: translateY(0);
+  }
 }
 
+.suggs {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  color: black;
+  width: 100%;
+  z-index: 10;
+  min-height: 20rem;
 
+  &__item {
+    position: relative;
+    font-size: 1.4rem;
+    padding: 1rem;
+    z-index: 20;
+    border-bottom: 1px solid rgb(235, 231, 231);
 
-.suggs{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    color: black;
-    width: 100%;
-    z-index: 10;
-    min-height: 20rem;
-
-
-    &__item{
-        position: relative;
-        font-size: 1.4rem;
-        padding: 1rem;
-        z-index: 20;
-        border-bottom: 1px solid rgb(235, 231, 231);
-
-        
-        &:hover{
-            border-radius: 0;
-            background-color:  $color-main;
-            color: white;
-
-        }
-        
-
+    &:hover {
+      border-radius: 0;
+      background-color: $color-main;
+      color: white;
     }
-    &__error {
-        font-size: 1.4rem;
-        padding: 1rem;
-        color: $color-error;
-    }
+  }
+  &__error {
+    font-size: 1.4rem;
+    padding: 1rem;
+    color: $color-error;
+  }
 }
