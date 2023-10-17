@@ -1,0 +1,114 @@
+$color-main : #cec0ae;
+$color-primary :  #7799c5;
+$color-secondary: #abd376;
+
+
+.date{
+    font-size: 2rem;
+   
+    text-align: center;
+    position: relative;
+    
+   
+    &__text{
+        border-radius: 5px;
+        background-color: white;
+        position: relative; 
+        padding: 2rem;
+        transition: all .2s ease;
+        cursor: pointer;
+        
+        &--secondary{
+            
+            border-bottom: 3px solid $color-secondary;
+           
+            &:hover{
+                
+                box-shadow: 0 5px 15px 4px rgba($color-main, .2);
+                transform: scale(1.02);
+            }
+
+
+        }
+        &--primary{
+            
+            border-bottom: 3px solid $color-primary;
+            
+
+            &:hover{
+               
+                box-shadow: 0 5px 15px 4px rgba($color-main, .2);
+                transform: scale(1.01);
+            }
+
+
+        }
+    }
+    &__calendar{
+        position: absolute;
+        top: 10rem;
+        right: 0;
+        z-index: 10;
+        border: none;
+        border-radius: 5px;
+        &--secondary{
+           
+            background-color: $color-secondary;
+            color: black;
+        }
+        &--primary{
+            
+            background-color: $color-primary;
+            color: black;
+        }
+        
+
+    }
+    
+}
+
+.time {
+    font-size: 2rem;
+
+    &__text{
+        transition: all .4s ease-in-out;
+        border-radius: 5px;
+
+        background-color: white;
+        position: relative; 
+        padding: 2rem;
+        display: flex;
+        
+        &--secondary{
+            border-bottom: 3px solid $color-secondary;
+            &:hover{
+               
+                box-shadow: 0 5px 15px 4px rgba($color-main, .2);
+                transform: scale(1.02);
+            }
+
+        }
+        &--primary{
+            
+            border-bottom: 3px solid $color-primary;
+            &:hover{
+                
+                box-shadow: 0 5px 15px 4px rgba($color-main, .2);
+                transform: scale(1.02);
+            }
+
+        }
+    }
+    &__clock{
+        position: absolute;
+        
+    }
+    &__input{
+        width: 4rem;
+        border: none;
+        font-family: inherit;
+        font-size: inherit;
+        text-align: center;
+    }
+
+}

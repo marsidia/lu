@@ -1,0 +1,20 @@
+.button{
+    font-family: 'Amatic SC', cursive;
+
+    outline: none;
+    border: none;
+
+    background-color: transparent;
+    font-size: 5rem;
+
+    cursor: pointer;
+    opacity: .7;
+    transition: all .4s ease;
+    align-self: center;
+    &:hover {
+        opacity: 1;
+
+        color: $color-main;
+        transform: scale(1.05);
+    }
+}

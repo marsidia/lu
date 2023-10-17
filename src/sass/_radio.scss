@@ -1,0 +1,93 @@
+$color-main : #cec0ae;
+$color-primary :  #7799c5;
+$color-secondary: #abd376;
+
+
+.radio {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+
+
+    &__label {
+
+        cursor: pointer;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: flex-start;
+        transition: all 0.3s ease-in-out;
+        border: 3px solid transparent;
+        &--primary:hover{
+            color: $color-primary;
+        }
+        &--secondary:hover{
+            color: $color-secondary;
+        }
+        
+        &__button {
+            height: 2rem;
+            width: 2rem;
+            border: 2px solid $color-main;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+  
+            &--primary{
+                border-color: $color-primary;
+                &::after{
+                    background-color: $color-primary;
+                }
+            }
+            &--secondary{
+                border-color: $color-secondary;
+                &::after{
+                    background-color: $color-secondary;
+                }
+            }
+            &::after {
+                content: "";
+                display: block;
+                height: 1rem;
+                width: 1rem;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                opacity: 0;
+                transition: opacity 0.2s;
+            }
+            
+        }
+        &:hover{
+            transition: all 0.2s ease;
+        }
+
+        &:hover &__button {
+            transition: all 0.2s ease;
+        }
+
+        &__text{
+            font-size: 1.4rem;
+        }
+    }
+    
+    &__input {
+        display: none;
+    }
+    &__input:checked ~ &__label &__label__button::after {
+        opacity: 1;
+    }
+    // &__input:checked ~ &__label {
+    //     // color: white;
+    // }
+    // &__input:checked ~ &__label &__button {
+    //     // color: white;
+    //     // border: 2px solid white;
+    // }
+}
+

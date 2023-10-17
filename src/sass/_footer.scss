@@ -1,0 +1,54 @@
+.footer{
+    height: 70vh;
+    // background-image: linear-gradient($color-grey-light,  black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-main-light;
+    padding-top: 5rem;
+    & a{
+
+        color: black;
+        text-decoration: none;
+        font-family: 'Amatic SC', cursive;
+
+        padding: 1rem 2rem;
+        outline: none;
+        border: none;
+
+        background-color: transparent;
+        font-size: 5rem;
+
+        cursor: pointer;
+        opacity: .7;
+        transition: all .4s ease;
+        &:hover {
+            opacity: 1;
+            color: $color-main;
+            transform: scale(1.05);
+        }
+    }
+    &__img{
+        height: 15rem;
+    }
+    
+    &__footnotes{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3rem;
+
+        & p{
+            font-size: 1.4rem;
+        }
+        & small{
+            font-size: 1.4rem;
+            & strong {
+                font-family: 'Berkshire Swash', cursive;
+                font-size: 3rem;
+            }
+        }
+    }
+}
