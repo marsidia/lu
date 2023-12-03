@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/lu/static/css/main.732985f6.css",
+    "main.js": "/lu/static/js/main.2ad40bdc.js",
+    "static/js/787.1d1a310d.chunk.js": "/lu/static/js/787.1d1a310d.chunk.js",
+    "static/media/train-draw.png": "/lu/static/media/train-draw.d0b31a8887783ce4d2ce.png",
+    "static/media/train-front.png": "/lu/static/media/train-front.857b9dc8a0d85f938e6c.png",
+    "static/media/tram.png": "/lu/static/media/tram.8bef40ca4390c4c896a5.png",
+    "static/media/rer.svg": "/lu/static/media/rer.3834dcb1baa05ef97e1b9c9f688f9fdb.svg",
+    "static/media/tram.svg": "/lu/static/media/tram.54f316027fe012869cbb5fe4bc826888.svg",
+    "static/media/train.svg": "/lu/static/media/train.72cc47229531182cc0abdde3839f016b.svg",
+    "static/media/bus.svg": "/lu/static/media/bus.45c92fc2f5cb732b407689d4b67d28da.svg",
+    "static/media/metro.svg": "/lu/static/media/metro.57e57e48bbb3b20c73b60b72a2662d44.svg",
+    "index.html": "/lu/index.html",
+    "main.732985f6.css.map": "/lu/static/css/main.732985f6.css.map",
+    "main.2ad40bdc.js.map": "/lu/static/js/main.2ad40bdc.js.map",
+    "787.1d1a310d.chunk.js.map": "/lu/static/js/787.1d1a310d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.732985f6.css",
+    "static/js/main.2ad40bdc.js"
+  ]
+}
